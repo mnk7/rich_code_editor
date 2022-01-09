@@ -8,12 +8,9 @@ import 'dart:ui' as ui hide TextStyle;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
-import 'package:flutter/widgets.dart';
 
 import 'exports.dart';
 
@@ -1691,7 +1688,7 @@ class RichEditableCodeState extends EditableTextState {
             cutEnabled &&
             _hasFocus &&
             controls?.canCut(this) == true
-        ? () => controls!.handleCut(this)
+        ? () => controls!.handleCut(this, null)
         : null;
   }
 
